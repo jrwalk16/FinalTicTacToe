@@ -9,7 +9,7 @@ let gameStart = true;
 let playerOneWins = "Player One Wins!";
 let playerTwoWins = "Player Two Wins!";
 let board = ['','','','','','','','',''];
-
+let tie = "Tie!"
 const winningNumbers = [["0", "1", "2"], ["3", "4", "6"], ["6","7", "8"], ["0", "4", "8"], ["2", "4", "6"], ["0", "3", "6"], ["1","4", "7"], ["2", "5", "8"]]
 
 
@@ -38,6 +38,8 @@ function updateGame(index) {
 
 
 function checkBoard (currentTurn) {
+    moves ++;
+    console.log(moves);
     if (board[0] === currentTurn && board[1] === currentTurn && board[2] === currentTurn ) {
         console.log("You win!");
         alert(`${currentTurn} wins!`);
@@ -86,13 +88,17 @@ function checkBoard (currentTurn) {
         gameStart = false;
         playGame();
     }
+    if (moves == 9 && gameStart == true) {
+        isTie();
+    }
     else {
         return true;
     }
 } 
 
-
-
+function isTie(){
+    alert("Its a Tie!")
+}
 
 function changeTurn()  {
     currentTurn = currentTurn === "X" ? "O": "X";
@@ -105,7 +111,7 @@ const playerClick = (square, index) => {
         updateGame(index);
         checkBoard(currentTurn);
         changeTurn(currentTurn);
-        console.log("X");
+
     }
 };
 
