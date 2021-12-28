@@ -11,6 +11,8 @@ body {
     grid-auto-rows: 1fr;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    font-size: 90px;
     
 }
 
@@ -18,7 +20,7 @@ body {
     
     height: 100px;
     width: 100px;
-    background-color: red;
+    background-color: greenyellow;
     outline: 5px black;
 }
 

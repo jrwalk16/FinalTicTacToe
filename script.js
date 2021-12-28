@@ -1,13 +1,12 @@
 function playGame() { 
 //global variables
 let boardSquares = Array.from(document.querySelectorAll(".square"));
-let playButton = document.querySelector("#playGame");
 let restart = document.querySelector("#restart");
 let moves = 0;
 let currentTurn = "X";
 let gameStart = true;
 let board = ['','','','','','','','',''];
-let tie = "Tie!";
+
 
 
 
