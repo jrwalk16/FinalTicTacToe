@@ -1,23 +1,20 @@
-function playGame() {
-
+function playGame() { 
+//global variables
 let boardSquares = Array.from(document.querySelectorAll(".square"));
 let playButton = document.querySelector("#playGame");
 let restart = document.querySelector("#restart");
 let moves = 0;
 let currentTurn = "X";
 let gameStart = true;
-let playerOneWins = "Player One Wins!";
-let playerTwoWins = "Player Two Wins!";
 let board = ['','','','','','','','',''];
-let tie = "Tie!"
-const winningNumbers = [["0", "1", "2"], ["3", "4", "6"], ["6","7", "8"], ["0", "4", "8"], ["2", "4", "6"], ["0", "3", "6"], ["1","4", "7"], ["2", "5", "8"]]
+let tie = "Tie!";
 
 
 
 
 
 
-
+//check to see if move is allowed by player by checking to see if any text in the red box
 
     function moveAllowed(square) {
         if(square.innerHTML === "X" || square.innerHTML === "O") {
@@ -29,6 +26,8 @@ const winningNumbers = [["0", "1", "2"], ["3", "4", "6"], ["6","7", "8"], ["0", 
 }
     }
 
+
+    //updates board array 
 function updateGame(index) {
     board[index] = currentTurn;
     console.log(board);
@@ -36,54 +35,46 @@ function updateGame(index) {
 
 
 
-
+//checks board array for any winning condition. If any lines within () then lines below are run.
 function checkBoard (currentTurn) {
     moves ++;
     console.log(moves);
     if (board[0] === currentTurn && board[1] === currentTurn && board[2] === currentTurn ) {
-        console.log("You win!");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     }
      if (board[0] === currentTurn && board[3] === currentTurn && board[6] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     }    
      if (board[0] === currentTurn && board[4] === currentTurn && board[8] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     } 
      if (board[8] === currentTurn && board[2] === currentTurn && board[5] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     }
      if (board[8] === currentTurn && board[6] === currentTurn && board[7] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     }
      if (board[4] === currentTurn && board[1] === currentTurn && board[7] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     }
      if (board[4] === currentTurn && board[3] === currentTurn && board[5] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
     }
      if (board[4] === currentTurn && board[2] === currentTurn && board[6] === currentTurn) {
-        console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
         playGame();
@@ -96,13 +87,16 @@ function checkBoard (currentTurn) {
     }
 } 
 
+
+//run in case of tie in game
 function isTie(){
     alert("Its a Tie!")
 }
 
+
+//lets players rotate through X and O.
 function changeTurn()  {
     currentTurn = currentTurn === "X" ? "O": "X";
-    console.log("X");
 }
 
 const playerClick = (square, index) => {
@@ -115,12 +109,14 @@ const playerClick = (square, index) => {
     }
 };
 
+
+//event listener function that allows clicks on red squares
 boardSquares.forEach( (square, index) => {
     square.addEventListener('click', () => playerClick(square, index));
 })
 
 
-
+//makes restart button clear out board to initial settings
 
 restart.addEventListener("click", (e) =>  {
     board = ['','','','','','','','',''];
@@ -132,7 +128,7 @@ restart.addEventListener("click", (e) =>  {
 });
 }
 
-playGame();
+playGame(); //Initializes game function
 
 
 
