@@ -1,4 +1,4 @@
-function playGame () {}
+function playGame() {
 
 let boardSquares = Array.from(document.querySelectorAll(".square"));
 let playButton = document.querySelector("#playGame");
@@ -42,41 +42,49 @@ function checkBoard (currentTurn) {
         console.log("You win!");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }
      if (board[0] === currentTurn && board[3] === currentTurn && board[6] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }    
      if (board[0] === currentTurn && board[4] === currentTurn && board[8] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     } 
      if (board[8] === currentTurn && board[2] === currentTurn && board[5] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }
      if (board[8] === currentTurn && board[6] === currentTurn && board[7] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }
      if (board[4] === currentTurn && board[1] === currentTurn && board[7] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }
      if (board[4] === currentTurn && board[3] === currentTurn && board[5] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }
      if (board[4] === currentTurn && board[2] === currentTurn && board[6] === currentTurn) {
         console.log("You win");
         alert(`${currentTurn} wins!`);
         gameStart = false;
+        playGame();
     }
     else {
         return true;
@@ -116,6 +124,9 @@ restart.addEventListener("click", (e) =>  {
     }) 
     console.log("event");
 });
+}
+
+playGame();
 
 
 
@@ -123,10 +134,3 @@ restart.addEventListener("click", (e) =>  {
 
 
 
-
-
-
-console.log(boardSquares);
-// console.log(playButton);
-// console.log(restart);
-console.log(board);
