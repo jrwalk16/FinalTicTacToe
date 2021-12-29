@@ -121,6 +121,7 @@ restart.addEventListener("click", (e) =>  {
     currentTurn = "X";
     boardSquares.forEach(function (square) {
         square.innerText = "" ;
+        moves = 0;
     }) 
     
 });
