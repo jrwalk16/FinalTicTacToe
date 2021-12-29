@@ -1,15 +1,15 @@
-#OVERVIEW
+# OVERVIEW
 
 1st Unit final project, TicTacToe game. 
 
 
 
-##WireFrame Link
+## WireFrame Link
 https://wireframe.cc/yvdjW3
 
 
 
-###User Stories
+### User Stories
 
 * user can start a new game.
 * user can click on a square adding X then O rotating through the game.
