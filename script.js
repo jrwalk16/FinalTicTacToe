@@ -29,7 +29,6 @@ let board = ['','','','','','','','',''];
     //updates board array 
 function updateGame(index) {
     board[index] = currentTurn;
-    console.log(board);
 }
 
 
@@ -37,7 +36,6 @@ function updateGame(index) {
 //checks board array for any winning condition. If any lines within () then lines below are run.
 function checkBoard (currentTurn) {
     moves ++;
-    console.log(moves);
     if (board[0] === currentTurn && board[1] === currentTurn && board[2] === currentTurn ) {
         alert(`${currentTurn} wins!`);
         gameStart = false;
@@ -104,7 +102,6 @@ const playerClick = (square, index) => {
         updateGame(index);
         checkBoard(currentTurn);
         changeTurn(currentTurn);
-
     }
 };
 
