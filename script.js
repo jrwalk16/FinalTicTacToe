@@ -22,8 +22,8 @@ let board = ['','','','','','','','',''];
         
     } else {
     return true;
-}
     }
+}
 
 
     //updates board array 
@@ -96,6 +96,8 @@ function changeTurn()  {
     currentTurn = currentTurn === "X" ? "O": "X";
 }
 
+
+//lists actions that take place when user clicks on square
 const playerClick = (square, index) => {
     if(moveAllowed(square) && gameStart) {
         square.innerHTML = currentTurn;
