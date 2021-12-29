@@ -20,4 +20,4 @@ user can hit the restart button to play again without the page refreshing.
 
 
 
-The program uses HTML, CSS and JavaScript. The 
+The program uses HTML, CSS and JavaScript. I solved for the winner by setting up && operators for all winning combinations. If one of the conditions is met the program alerts which player, X or O, wins the game. The last if statement in the checkBoard checks for a tie. It counts the moves until 9 and if none of the winning combinations is met the players are alerted of a tie. The conditions are checked by the program adding X or O to an empty array then checking if 3 symbols make up a row. 
