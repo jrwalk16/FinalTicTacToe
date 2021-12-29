@@ -1,6 +1,6 @@
 # OVERVIEW
 
-1st Unit final project, TicTacToe game. 
+1st Unit final project, TicTacToe game. The program was built using HTML, CSS and JavaScript.
 
 
 

@@ -122,7 +122,7 @@ restart.addEventListener("click", (e) =>  {
     boardSquares.forEach(function (square) {
         square.innerText = "" ;
     }) 
-    console.log("event");
+    
 });
 }
 
