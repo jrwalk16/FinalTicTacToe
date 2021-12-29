@@ -20,4 +20,4 @@ user can hit the restart button to play again without the page refreshing.
 
 
 
-The program uses HTML, CSS and JavaScript. 
+The program uses HTML, CSS and JavaScript. The 
